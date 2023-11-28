@@ -1,9 +1,9 @@
 let userName = prompt('What is your name?').trim();
-userName = userName[0].toUpperCase() + userName.slice(1).toLowerCase();
+userName = userName.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
 
 
 let userSurname = prompt('What is your surname?').trim();
-userSurname = userSurname[0].toUpperCase() + userSurname.slice(1).toLowerCase();
+userSurname = userSurname.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
 
 
 let userEmail = prompt('Enter your email?').replaceAll().toLowerCase();
